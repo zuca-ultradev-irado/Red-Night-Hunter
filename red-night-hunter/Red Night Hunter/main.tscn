@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://b0m637lo6itwn"]
+
+[ext_resource type="Script" uid="uid://cryxbt0tmqcte" path="res://character_body_2d.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://df4orvuatyc8p" path="res://Marcelo Idle.png" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://bj4g0b35oyg0l" path="res://collision_shape_2d.gd" id="2_h2yge"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h2yge"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1bvp3")
+}],
+"loop": 1,
+"name": &"Marcelo Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(639, 358)
+
+[node name="Main" type="Node2D" unique_id=1255809247]
+
+[node name="Level" type="Node2D" parent="." unique_id=1976605809]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Level" unique_id=345840612]
+
+[node name="Enemies" type="Node2D" parent="." unique_id=1139510086]
+
+[node name="Bullets" type="Node2D" parent="." unique_id=2009618070]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=499301222]
+script = ExtResource("1_0xm2m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=502711119]
+sprite_frames = SubResource("SpriteFrames_h2yge")
+animation = &"Marcelo Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1179556302]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_h2yge")
+script = ExtResource("2_h2yge")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1018390685]
+
+[node name="Muzzle" type="Marker2D" parent="Player" unique_id=1008823806]
