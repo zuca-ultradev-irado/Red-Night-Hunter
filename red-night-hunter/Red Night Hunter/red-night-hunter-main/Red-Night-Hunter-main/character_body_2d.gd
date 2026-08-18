@@ -10,7 +10,7 @@ func _physics_process(_delta):
 		"ui_down"
 	)
 
-	print(direction)
-
 	velocity = direction * speed
 	move_and_slide()
+
+	look_at(get_global_mouse_position())
