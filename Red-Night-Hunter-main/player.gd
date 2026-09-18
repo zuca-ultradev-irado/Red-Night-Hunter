@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var max_health := 1
 
 var health := max_health
+var collectibles := 0
 
 
 func _physics_process(_delta):

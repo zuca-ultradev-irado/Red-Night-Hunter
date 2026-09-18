@@ -1,16 +1,16 @@
 extends CharacterBody2D
 
-@export var speed := 150.0
+@export var player: CharacterBody2D
+@export var speed := 80.0
 
 func _physics_process(_delta):
-	var direction = Input.get_vector(
-		"ui_left",
-		"ui_right",
-		"ui_up",
-		"ui_down"
-	)
+	if player == null:
+		return
 
+	# Faz o inimigo olhar para o Player
+	look_at(player.global_position)
+
+	# Faz o inimigo seguir o Player
+	var direction = global_position.direction_to(player.global_position)
 	velocity = direction * speed
 	move_and_slide()
-
-	look_at(get_global_mouse_position())

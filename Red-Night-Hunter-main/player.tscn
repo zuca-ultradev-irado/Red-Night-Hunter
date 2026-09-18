@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://c6bh3x5vi3kfq"]
+
+[ext_resource type="Script" uid="uid://bn3a6mrm5iu5b" path="res://player.gd" id="1_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://df4orvuatyc8p" path="res://Marcelo Idle.png" id="2_hqtel"]
+[ext_resource type="Script" uid="uid://bj4g0b35oyg0l" path="res://collision_shape_2d.gd" id="3_sweqy"]
+[ext_resource type="Texture2D" uid="uid://dfjykyp212dph" path="res://crosshair.png" id="4_sweqy"]
+[ext_resource type="Script" uid="uid://b8tbrj7l1nak2" path="res://crosshair.gd" id="5_2hs0m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h2yge"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hqtel")
+}],
+"loop": 1,
+"name": &"Marcelo Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(16, 31)
+
+[node name="Player" type="CharacterBody2D" unique_id=1098655549]
+script = ExtResource("1_i3pqv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=171308277]
+position = Vector2(4, -1)
+sprite_frames = SubResource("SpriteFrames_h2yge")
+animation = &"Marcelo Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1786290137]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_h2yge")
+script = ExtResource("3_sweqy")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1359464683]
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1542041831]
+
+[node name="Crosshair" type="Sprite2D" parent="." unique_id=1715090752]
+texture = ExtResource("4_sweqy")
+script = ExtResource("5_2hs0m")
