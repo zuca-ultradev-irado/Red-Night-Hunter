@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bhhjjk8ntfhxr"]
+
+[node name="DeathScreen" type="CanvasLayer" unique_id=2013172474]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1884943709]
+offset_top = 117.0
+offset_right = 184.0
+offset_bottom = 201.0
+color = Color(0, 0, 0, 0.50980395)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=421443683]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Você Morreu
+
+Aperte R para reiniciar"

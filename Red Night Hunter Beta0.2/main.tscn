@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b0m637lo6itwn"]
+
+[ext_resource type="PackedScene" uid="uid://c6bh3x5vi3kfq" path="res://player.tscn" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://yg5kimxpibb8" path="res://enemy.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bngkwn2h1f72v" path="res://level.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bnmi2enpk406n" path="res://collectible.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bhhjjk8ntfhxr" path="res://death_screen.tscn" id="5_lquwl"]
+
+[node name="Main" type="Node2D" unique_id=1255809247]
+
+[node name="Player" parent="." unique_id=1098655549 instance=ExtResource("1_h2yge")]
+z_index = 2
+position = Vector2(-178, 55)
+
+[node name="Enemy" parent="." unique_id=641879336 node_paths=PackedStringArray("player") instance=ExtResource("2_1bvp3")]
+z_index = 2
+position = Vector2(173, 61)
+player = NodePath("../Player")
+
+[node name="Level" parent="." unique_id=127647002 instance=ExtResource("3_h2yge")]
+
+[node name="Collectible" parent="." unique_id=51183146 instance=ExtResource("4_1bvp3")]
+z_index = 2
+position = Vector2(35, 30)
+
+[node name="DeathScreen" parent="." unique_id=2013172474 instance=ExtResource("5_lquwl")]
