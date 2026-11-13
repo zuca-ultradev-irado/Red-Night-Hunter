@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://hhc02i0l7x71"]
+
+[ext_resource type="Script" uid="uid://c2vrhqp5738gs" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="PackedScene" uid="uid://b0m637lo6itwn" path="res://main.tscn" id="2_7vrkn"]
+
+[node name="MainMenu" type="Control" unique_id=2143501244]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 166.0
+offset_top = 80.0
+offset_right = 206.0
+offset_bottom = 120.0
+script = ExtResource("1_06t4h")
+game_scene = ExtResource("2_7vrkn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1982238015]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -166.0
+offset_top = -80.0
+offset_right = 433.0
+offset_bottom = 238.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.22678632, 0, 0.026161896, 1)
+
+[node name="Title" type="Label" parent="." unique_id=1603362610]
+layout_mode = 0
+offset_left = 29.0
+offset_top = -28.0
+offset_right = 257.0
+offset_bottom = 9.0
+theme_override_font_sizes/font_size = 27
+text = "Red Night Hunter"
+
+[node name="PlayButton" type="Button" parent="." unique_id=848013208]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 99.0
+offset_right = 160.0
+offset_bottom = 130.0
+text = "Jogar"
+
+[node name="QuitButton" type="Button" parent="." unique_id=625176776]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 154.0
+offset_right = 155.0
+offset_bottom = 185.0
+text = "Sair"

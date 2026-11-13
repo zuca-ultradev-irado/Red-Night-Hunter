@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bwjvbi4apljby"]
+
+[ext_resource type="Script" uid="uid://7ftj354r7oc1" path="res://pause_menu.gd" id="1_hdmo1"]
+
+[node name="PauseMenu" type="Control" unique_id=2012355461]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hdmo1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=723595363]
+layout_mode = 0
+offset_left = 182.0
+offset_right = 452.0
+offset_bottom = 361.0
+color = Color(0.61878926, 0, 0.0115689, 1)
+
+[node name="Title" type="Label" parent="." unique_id=1997968149]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 29.0
+offset_right = 374.0
+offset_bottom = 71.0
+theme_override_font_sizes/font_size = 30
+text = "Pausado"
+
+[node name="ResumeButton" type="Button" parent="." unique_id=1095633422]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 121.0
+offset_right = 353.0
+offset_bottom = 152.0
+text = "Continuar"
+
+[node name="RestartButton" type="Button" parent="." unique_id=1149322734]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 173.0
+offset_right = 353.0
+offset_bottom = 204.0
+text = "Reiniciar"
+
+[node name="MenuButton" type="Button" parent="." unique_id=1661682205]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 227.0
+offset_right = 383.0
+offset_bottom = 258.0
+text = "Menu Principal
+"
